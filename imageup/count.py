@@ -16,9 +16,12 @@ for path,dirs,files in os.walk(path):
     # print(path,dirs,files)
     for file in files:
         count+=1
-        timestamp = os.path.getctime(os.path.join(path, file));
+        allpath = os.path.join(path, file);
+        timestamp = os.path.getctime(allpath);
         date = datetime.datetime.fromtimestamp(timestamp)
-        print(file,date.strftime('%Y-%m-%d %H:%M:%S'))
+        today = datetime.datetime.today()
+        # print(today-date)
+        print "file %s create date %s  today %s byte %d" %(file,date.strftime('%Y-%m-%d %H:%M:%S'),today.strftime('%Y-%m-%d %H:%M:%S'),os.path.getsize(allpath))
 print(count)
 
 
