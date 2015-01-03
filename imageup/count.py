@@ -2,7 +2,9 @@ __author__ = 'zhufeng'
 
 import os,datetime;
 from sys import argv;
-
+'''
+统计文件夹下文件个数，创建日期,文件大小
+'''
 
 
 try:
