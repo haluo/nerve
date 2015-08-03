@@ -21,7 +21,7 @@ for path,dirs,files in os.walk(path):
         count+=1
         allpath = os.path.join(path, file);
         allpath = allpath.replace('/data/upext','http://www1.autoimg.cn')
-        print allpath
+        print(allpath)
 # print(count)
 
 
